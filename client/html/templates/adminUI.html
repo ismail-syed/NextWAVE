@@ -1,0 +1,23 @@
+<template name="adminUi">
+	<div class="">
+		<h4> Admin Interface</h4>
+		<br />
+			<div class="">
+				<h5> Create a new event: </h5>
+
+				<form id="createEventForm" class="add-post container">
+		 			<input clas="form-control" type="text" id="eventName" placeholder="Event name" style="">
+		 			<input clas="form-control" type="text" id="eventDate" placeholder="Date" style="">
+		 			<input clas="form-control" type="text" id="eventTime" placeholder="Time" style="">
+		 			<input clas="form-control" type="text" id="eventLocation" placeholder="Location" style="">
+		 			<input clas="form-control" type="text" id="eventDescription" placeholder="Description" style="">
+ 				   <input type="submit" class="submit btn btn-sm btn-primary" value="Submit"> 
+
+
+				</form>
+			</div>
+ 		<br />
+ 		{{> posts }}
+
+	</div>
+</template>

@@ -1,0 +1,15 @@
+ <template name="user">
+ 	<h4 class="page-header">Welcome, {{name}}</h4>
+ 	<br />
+ 	{{#if isAdmin}}
+	 	<div class="well">
+	 		{{> adminUi}}
+ 		</div>
+	{{else}}
+ 		<div class="well ">
+	 		<h6>Posts: </h6>
+	 		{{> posts }}
+	 	</div>
+
+ 	{{/if}}
+ </template>

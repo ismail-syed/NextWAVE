@@ -1,0 +1,32 @@
+<head>
+     <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <title>NextWave</title>
+     <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
+     <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+ </head>
+
+ <body>
+
+<!--  	<div class="container">
+ 		<div class="page-header">
+ 			<h2> Login </h2>
+ 		</div>
+		{{> loginButtons }}
+ 	</div>
+ --> 	
+ 	<div class="container">
+
+ 		{{#if currentUser}}
+	 		{{> loginButtons }}
+	 		{{> user}} 
+
+	 	{{else}}
+	 		{{> login}}
+	 		{{> loginButtons }}
+		{{/if}}
+		
+ 	</div>
+
+
+ </body>

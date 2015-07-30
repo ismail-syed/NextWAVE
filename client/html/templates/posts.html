@@ -1,0 +1,23 @@
+<template name="posts">
+	<div>
+		{{#each posts}}
+			{{> post }}
+			<br />
+		  <hr>
+		{{/each}}
+	</div>
+</template>
+
+<template name="post">   
+	<div class="{{#if checked}}checked{{/if}} row container col-sm-12 col-md-12 col-lg-12">  
+	   <h6 style="font-size:14pt"> Event name: {{ name }} </h6> 
+	   <span style="font-size:12pt" class="align-left">Date: {{ date }}</span>    
+	   <span style="font-size:12pt" class="align-left">Time: {{ time }}</span>    
+	   <span style="font-size:12pt" class="align-left">Location: {{ location }}</span>    
+	   <span style="font-size:12pt" class="align-left">Description: {{ description }}</span>    
+	  
+	  {{#if isAdmin}}
+		  <button class=" delete btn btn-sm btn-danger" style="float:right">&times;</button>   
+	  {{ /if }}
+	</div>
+ </template>
