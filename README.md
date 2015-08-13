@@ -1,9 +1,13 @@
 # NextWAVE
+A web application to manage and publish NextWave events 
+
+This applications utilizes Meteor, a full stack web application framework for building web and mobile applications in Javascript.  
+Website: https://www.meteor.com/
+Documentation: http://docs.meteor.com/
 
 ## Quick Start
 
 1) Install Meteor:
-Documentation: http://docs.meteor.com/
 ```bash
 curl https://install.meteor.com | /bin/sh
 ```
