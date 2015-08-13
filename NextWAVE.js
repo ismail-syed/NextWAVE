@@ -1,5 +1,5 @@
 if (Meteor.isClient) {
-
+    
   Template.user.helpers({
     name: function() {
        return Meteor.user().username || Meteor.user().profile.name
