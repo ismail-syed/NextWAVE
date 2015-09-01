@@ -41,3 +41,7 @@ You'll need to do a bit of configuring to let the application know what accounts
   * In the console enter `Meteor.userId()`. The console should spit out a string similar to `g3933nmm85FTdpgon`
   * Copy that string and replace the current one in NextWave/client/lib/helpers.js
   * Now the app should be able to display different views based on whether a user or admin is logged in 
+
+### File Structure
+
+This application follows the files structure explained in the [Unofficial Meteor FAQ] (https://github.com/oortcloud/unofficial-meteor-faq#user-content-where-should-i-put-my-files) repository: 
