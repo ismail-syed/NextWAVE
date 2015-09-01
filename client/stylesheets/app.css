@@ -2,6 +2,10 @@
 	border: 2px solid #69B0F0;
 	padding: 2rem; 
 }
+.secondary-box {
+	border: 2px solid #f1f1f1;
+	padding: 2rem; 
+}
 .submit-btn {
 	padding-top: 1rem;
 }

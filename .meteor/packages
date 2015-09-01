@@ -11,3 +11,4 @@ mongo
 accounts-base
 accounts-password
 accounts-ui-unstyled
+fortawesome:fontawesome
