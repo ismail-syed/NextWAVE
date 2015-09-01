@@ -1,33 +1,8 @@
-if (Meteor.isClient) {
-    
-  Template.user.helpers({
-    name: function() {
-       return Meteor.user().username || Meteor.user().profile.name
-    }
-  });
+// HELPERS
 
 
-  Accounts.ui.config({
-    passwordSignupFields: 'USERNAME_AND_EMAIL'
-  });
-
-
-  Template.registerHelper("isAdmin", function(){
-    if(Meteor.user()._id === "sLdbS8cyzrJxy8BKR"){
-      return true;
-    }
-    return false;
-  });
-
-
- Template.posts.helpers({
-    posts: function () {
-      return Posts.find({}, {sort: {createdAt: -1}} );
-    }     
-  });
-
-
-  Template.adminUi.events({
+// EVENTS
+Template.adminUi.events({
    "submit #createEventForm": function(e) {
      // alert("start submitee")
       e.preventDefault();
@@ -55,18 +30,3 @@ if (Meteor.isClient) {
       // alert("submitted");    
     }
   });
-
-  Template.post.events({
-    "click .delete": function () {
-      Posts.remove(this._id);
-    }
-  });
-
-}
-
-if (Meteor.isServer) {
-  Meteor.startup(function () {
-    // code to run on server at startup
-  });
-}
-
