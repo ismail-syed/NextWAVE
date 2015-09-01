@@ -27,8 +27,11 @@ sudo meteor
 The app should now be running on http://localhost:3000/
 
 4) Configuration: You'll need to do a bit of configuring to let the application know what accounts are Admin acccounts. This a quite the hack, but is only temporary. 
+
   i) Create a user account, something simple. "user" and "password will do just fine for the username and password respectively.
+  
   ii) Create an admin account, once again "admin" and "password" should do fine for now. 
+  
   iii) Now we need to let the application know which account is the admin:
         - Log into the application through the admin account you just created
         - Open your browser's debugger tools and navigate to the console.
