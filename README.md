@@ -44,4 +44,4 @@ You'll need to do a bit of configuring to let the application know what accounts
 
 ### File Structure
 
-This application follows the files structure explained in the [Unofficial Meteor FAQ] (https://github.com/oortcloud/unofficial-meteor-faq#user-content-where-should-i-put-my-files) repository: 
+This application follows the files structure explained in the [Unofficial Meteor FAQ] (https://github.com/oortcloud/unofficial-meteor-faq) repository under the section [Where should I put my files?](https://github.com/oortcloud/unofficial-meteor-faq#user-content-where-should-i-put-my-files) 
