@@ -2,59 +2,65 @@
 	<div class="">
 		<br />
 			<div class="primary-box">
-				<form id="createEventForm" class="add-post">
+				<form id="createEventForm" class="add-post ">
 					<fieldset>
 						<legend>
-							<span> <i class="fa fa-plus-square fa-lg"></i> Create a new post </span> 
+							<div class="">
+								<h4 style="display:inline" class=""> Create a new post </h4>  
+								<i class="fa fa-plus-square fa-lg pull-right" data-toggle="collapse" data-target="#create-post"></i> 
+							</div> 
 						</legend>
 
-						<!-- Event Name -->
-						<div class="form-group row">
-							<label for="inputEventName" class="col-lg-2 control-label">Event Name</label>
-							<div class="col-lg-4">
-					 			<input id="eventName" class="form-control" type="text" placeholder="Event name">
+						<div id="create-post" class="collapse">
+							 <!-- Event Name -->
+							<div class="form-group row container">
+								<label for="inputEventName" class="col-lg-2 control-label">Event Name</label>
+								<div class="col-lg-4">
+						 			<input id="eventName" class="form-control" type="text" placeholder="Event name">
+								</div>
 							</div>
+
+							<!-- Date -->
+							<div class="form-group row container">
+								<label for="inputEventDate" class="col-lg-2 control-label">Date</label>
+								<div class="col-lg-4">
+						 			<input id="eventDate" class="form-control" type="text" placeholder="Date">
+								</div>
+							</div>
+
+							<!-- Time -->
+							<div class="form-group row container">
+								<label for="inputEventTime" class="col-lg-2 control-label">Time</label>
+								<div class="col-lg-4">
+						 			<input id="eventTime" class="form-control" type="text" placeholder="Time">
+								</div>
+							</div>
+
+
+							<!-- Location -->
+							<div class="form-group row container">
+								<label for="inputEventLocation" class="col-lg-2 control-label">Location</label>
+								<div class="col-lg-4">
+						 			<input id="eventLocation" class="form-control" type="text" placeholder="Location">
+								</div>
+							</div>
+
+							<!-- Description -->
+							<div class="form-group row container">
+								<label for="inputEventDescription" class="col-lg-2 control-label">Description</label>
+								<div class="col-lg-10">
+									<textarea id="eventDescription" class="form-control" rows="3"></textarea>
+								</div>
+							</div>
+
+							<!-- Submit -->
+							 <div class="submit-btn form-group row container">
+			                    <div class="col-xs-offset-8 col-sm-offset-8 col-md-offset-4 col-lg-offset-10">
+			                      <input type="submit" class="submit btn btn-sm btn-primary col-xs-10 col-sm-10 col-md-6 col-lg-8" value="Submit">
+			                    </div>
+			                 </div>
 						</div>
 
-						<!-- Date -->
-						<div class="form-group row">
-							<label for="inputEventDate" class="col-lg-2 control-label">Date</label>
-							<div class="col-lg-4">
-					 			<input id="eventDate" class="form-control" type="text" placeholder="Date">
-							</div>
-						</div>
-
-						<!-- Time -->
-						<div class="form-group row">
-							<label for="inputEventTime" class="col-lg-2 control-label">Time</label>
-							<div class="col-lg-4">
-					 			<input id="eventTime" class="form-control" type="text" placeholder="Time">
-							</div>
-						</div>
-
-
-						<!-- Location -->
-						<div class="form-group row">
-							<label for="inputEventLocation" class="col-lg-2 control-label">Location</label>
-							<div class="col-lg-4">
-					 			<input id="eventLocation" class="form-control" type="text" placeholder="Location">
-							</div>
-						</div>
-
-						<!-- Description -->
-						<div class="form-group row">
-							<label for="inputEventDescription" class="col-lg-2 control-label">Description</label>
-							<div class="col-lg-10">
-								<textarea id="eventDescription" class="form-control" rows="3"></textarea>
-							</div>
-						</div>
-
-						<!-- Submit -->
-						 <div class="submit-btn form-group row">
-		                    <div class="col-xs-offset-8 col-sm-offset-8 col-md-offset-4 col-lg-offset-10">
-		                      <input type="submit" class="submit btn btn-sm btn-primary col-xs-10 col-sm-10 col-md-6 col-lg-8" value="Submit">
-		                    </div>
-		                  </div>
 					</fieldset>
 				</form>
 			</div>
