@@ -6991,6 +6991,7 @@ button.close {
 body {
   -webkit-font-smoothing: antialiased;
   letter-spacing: .1px;
+  text-rendering: optimizeLegibility;
 }
 p {
   margin: 0 0 1em;
@@ -6999,6 +7000,7 @@ input,
 button {
   -webkit-font-smoothing: antialiased;
   letter-spacing: .1px;
+  text-rendering: optimizeLegibility;
 }
 a {
   -webkit-transition: all 0.2s;
@@ -7307,43 +7309,24 @@ input[type="checkbox"]:disabled:checked:after,
 }
 .has-warning input:not([type=checkbox]),
 .has-warning .form-control,
-.has-warning input.form-control[readonly],
-.has-warning input[type=text][readonly],
-.has-warning [type=text].form-control[readonly],
 .has-warning input:not([type=checkbox]):focus,
 .has-warning .form-control:focus {
-  border-bottom: none;
   -webkit-box-shadow: inset 0 -2px 0 #ff9800;
   box-shadow: inset 0 -2px 0 #ff9800;
 }
 .has-error input:not([type=checkbox]),
 .has-error .form-control,
-.has-error input.form-control[readonly],
-.has-error input[type=text][readonly],
-.has-error [type=text].form-control[readonly],
 .has-error input:not([type=checkbox]):focus,
 .has-error .form-control:focus {
-  border-bottom: none;
   -webkit-box-shadow: inset 0 -2px 0 #e51c23;
   box-shadow: inset 0 -2px 0 #e51c23;
 }
 .has-success input:not([type=checkbox]),
 .has-success .form-control,
-.has-success input.form-control[readonly],
-.has-success input[type=text][readonly],
-.has-success [type=text].form-control[readonly],
 .has-success input:not([type=checkbox]):focus,
 .has-success .form-control:focus {
-  border-bottom: none;
   -webkit-box-shadow: inset 0 -2px 0 #4caf50;
   box-shadow: inset 0 -2px 0 #4caf50;
-}
-.has-warning .input-group-addon,
-.has-error .input-group-addon,
-.has-success .input-group-addon {
-  color: #666666;
-  border-color: transparent;
-  background-color: transparent;
 }
 .nav-tabs > li > a,
 .nav-tabs > li > a:focus {

@@ -13,40 +13,55 @@
 
 						<div id="create-post" class="collapse">
 							 <!-- Event Name -->
-							<div class="form-group row container">
+							<div class="form-group row">
 								<label for="inputEventName" class="col-lg-2 control-label">Event Name</label>
-								<div class="col-lg-4">
+								<div class="col-lg-10">
 						 			<input id="eventName" class="form-control" type="text" placeholder="Event name">
 								</div>
 							</div>
 
-							<!-- Date -->
-							<div class="form-group row container">
-								<label for="inputEventDate" class="col-lg-2 control-label">Date</label>
-								<div class="col-lg-4">
-						 			<input id="eventDate" class="form-control" type="text" placeholder="Date">
+							<!-- Date & Time -->
+							<div class="form-group row">
+								<label for="inputEventDate" class="col-lg-2 control-label">Date & Time</label>
+								
+								<div class="col-lg-5">
+						 			<div class="input-group datetimepicker">
+									    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+									    <input id="eventDateTimeStart" class="set-due-date form-control" type="text" placeholder="Begins"/>
+									 </div>
+						 			<!-- <input id="eventDateTimeFrom" class="form-control" type="text" placeholder="From"> -->
 								</div>
+								<div class="col-lg-5">
+						 			<!-- <input id="eventDateTimeTo" class="form-control" type="text" placeholder="To"> -->
+						 			<div class="input-group datetimepicker">
+									    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+									    <input id="eventDateTimeEnd" class="set-due-date form-control" type="text" placeholder="Ends"/>
+									 </div>
+								</div>	
+								
 							</div>
 
+							
+
 							<!-- Time -->
-							<div class="form-group row container">
+							<!-- <div class="form-group row">
 								<label for="inputEventTime" class="col-lg-2 control-label">Time</label>
 								<div class="col-lg-4">
 						 			<input id="eventTime" class="form-control" type="text" placeholder="Time">
 								</div>
 							</div>
-
+ -->
 
 							<!-- Location -->
-							<div class="form-group row container">
+							<div class="form-group row">
 								<label for="inputEventLocation" class="col-lg-2 control-label">Location</label>
-								<div class="col-lg-4">
+								<div class="col-lg-10">
 						 			<input id="eventLocation" class="form-control" type="text" placeholder="Location">
 								</div>
 							</div>
 
 							<!-- Description -->
-							<div class="form-group row container">
+							<div class="form-group row">
 								<label for="inputEventDescription" class="col-lg-2 control-label">Description</label>
 								<div class="col-lg-10">
 									<textarea id="eventDescription" class="form-control" rows="3"></textarea>
@@ -54,7 +69,7 @@
 							</div>
 
 							<!-- Submit -->
-							 <div class="submit-btn form-group row container">
+							 <div class="submit-btn form-group row">
 			                    <div class="col-xs-offset-8 col-sm-offset-8 col-md-offset-4 col-lg-offset-10">
 			                      <input type="submit" class="submit btn btn-sm btn-primary col-xs-10 col-sm-10 col-md-6 col-lg-8" value="Submit">
 			                    </div>

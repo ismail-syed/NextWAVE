@@ -7,24 +7,29 @@ Template.adminUi.events({
      // alert("start submitee")
       e.preventDefault();
 
+      debugger;
       var postEventName = e.target.eventName.value;
-      var postDate = e.target.eventDate.value;
-      var postTime = e.target.eventTime.value;
+      var postDate = e.target.eventDateTimeStart.value.split(" ")[0];
+      var postTimeStart = e.target.eventDateTimeStart.value.split(" ")[1] 
+                          + e.target.eventDateTimeStart.value.split(" ")[2];
+      var postTimeEnd = e.target.eventDateTimeEnd.value.split(" ")[1]
+                        + e.target.eventDateTimeEnd.value.split(" ")[2];
       var postLocation = e.target.eventLocation.value;
       var postDescrition = e.target.eventDescription.value;
 
       Posts.insert({
         name: postEventName, 
         date: postDate,
-        time: postTime, 
+        timeStart: postTimeStart,
+        timeEnd: postTimeEnd, 
         location: postLocation, 
         description: postDescrition,
         createdAt: new Date()
       });
 
       e.target.eventName.value = "";
-      e.target.eventDate.value = "";
-      e.target.eventTime.value = "";
+      e.target.eventDateTimeStart.value = "";
+      e.target.eventDateTimeEnd.value = "";
       e.target.eventLocation.value = "";
       e.target.eventDescription.value = "";
       // alert("submitted");    

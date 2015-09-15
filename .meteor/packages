@@ -12,3 +12,4 @@ accounts-base
 accounts-password
 accounts-ui-unstyled
 fortawesome:fontawesome
+tsega:bootstrap3-datetimepicker
