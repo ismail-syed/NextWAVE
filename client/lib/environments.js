@@ -1,9 +1,25 @@
 // Configuration of any client side packages
 
-  Accounts.ui.config({
-    passwordSignupFields: 'USERNAME_ONLY'
-  });
+	Accounts.ui.config({
+    	passwordSignupFields: 'USERNAME_ONLY'
+	});
 
-//   Template.tempName.onRendered(function() {
-//     this.$('.datetimepicker').datetimepicker();
-// });
+
+	Router.route('/', function () {
+		this.render('home');
+	});
+
+	// Router.route('/post');
+
+	// Router.route('/post', {
+	//     data: function(){
+	//     }
+	// });
+
+	Router.route('/post/:_id', {
+	    template: 'postDetails',
+	    data: function(){
+	    	 var currentPost = this.params._id;
+    	     return Posts.findOne({ _id: currentPost })
+	    }
+	});
