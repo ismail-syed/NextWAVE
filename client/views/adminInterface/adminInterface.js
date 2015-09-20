@@ -7,7 +7,6 @@ Template.adminUi.events({
      // alert("start submitee")
       e.preventDefault();
 
-      debugger;
       var postEventName = e.target.eventName.value;
       var postDate = e.target.eventDateTimeStart.value.split(" ")[0];
       var postTimeStart = e.target.eventDateTimeStart.value.split(" ")[1] 

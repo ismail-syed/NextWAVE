@@ -6,6 +6,7 @@
 			<div class="row">
 				<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
 				   <p style="font-size:14pt"><h4 style="display:inline"> Event name: </h4>{{ name }} </p> 
+				   <hr>
 				</div>
 				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
 					 {{#if isAdmin}}
@@ -27,6 +28,37 @@
 				</div>
 			</div>
 		</div>
+
+		<div class="col-sm-12 col-md-12 col-lg-12 secondary-box">  
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				   <h4>Comments</h4> 
+				   <hr>
+				</div>
+
+				<!-- LIST OF COMMENTS -->
+				<div class="row container">
+					<div class="col-xs-10 col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10 col-lg-10">
+						{{> comments }}
+					</div>
+				</div>
+
+				<!-- ADD COMMENT FORM -->
+				<div class="row container">
+					<form id="addCommentForm" class="add-comment">
+						<div class="col-xs-offset-4 col-xs-6 col-sm-offset-4 col-sm-6 col-md-offset-4 col-md-6 col-lg-offset-4 col-lg-6">
+						    <input id="addComment" class="form-control" type="text" placeholder="Add a comment..."/>
+						</div>
+						 <div class="submit-btn form-
+						 group col-xs-2 col-sm-2 col-md-2 col-lg-2">
+		                      <input type="submit" class="submit btn btn-sm btn-primary" value="Add Comment">
+		                 </div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+
 	</div>
 	
 </template>
