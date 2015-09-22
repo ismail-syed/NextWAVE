@@ -1,0 +1,52 @@
+<template name="navbar">
+	<nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container">
+	   
+	   <!-- LEFT -->
+	   <div class="navbar-header">
+          <a class="navbar-brand" href="#"> 
+          	<img id="navbar-nextwave-logo" width='40px' height='40px' src="./logo_logo.png"> 
+          </a>
+          <a class="navbar-brand" href="#">nextWave</a>
+       </div>
+
+	   <!-- RIGHT -->
+		<ul class="nav navbar-nav navbar-right">
+	        <li class="dropdown close">
+	            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+	            	<i style="font-size: 1.0em;" class="fa fa-list-alt"></i> 
+	            	<span class="caret"></span>
+	            </a>
+	            <ul class="dropdown-menu" role="menu">
+	              <li><a href="#">Notifications</a></li>
+	            </ul>
+	         </li>
+	      
+	        <li class="dropdown close">
+	            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+	            	<i style="font-size: 1.0em;" class="fa fa-cog"></i>
+	            	<span class="caret"></span>
+	            </a>
+	            <ul class="dropdown-menu" role="menu">
+	              <li><a href="#">Settings</a></li>
+	            </ul>
+	         </li>
+
+	         <li class="dropdown close">
+	            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+	            	<i style="font-size: 1.0em;" class="fa fa-user"></i>
+	            	<span class="caret"></span>
+	            </a>
+	            <ul class="dropdown-menu" role="menu">
+	              <li> {{> loginButtons}} </li>
+	            </ul>
+	         </li>
+	        <!--  <li>
+		 		{{> loginButtons }}
+	         </li> -->
+
+	    </ul>
+
+	  </div>
+	</nav>
+</template>
