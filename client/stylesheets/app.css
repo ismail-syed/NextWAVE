@@ -21,7 +21,8 @@ body {
 .post-block{
 	padding: 10px 10px ;
 }
-#btn-unsubscribe{
+#btn-unsubscribe,
+#btn-subscribe{
 	display:none;
 }
 
