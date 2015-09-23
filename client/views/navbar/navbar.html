@@ -12,6 +12,8 @@
 
 	   <!-- RIGHT -->
 		<ul class="nav navbar-nav navbar-right">
+	        
+	        <!-- NOTIFICATIONS -->
 	        <li class="dropdown close">
 	            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
 	            	<i style="font-size: 1.0em;" class="fa fa-list-alt"></i> 
@@ -22,7 +24,8 @@
 	            </ul>
 	         </li>
 	      
-	        <li class="dropdown close">
+	      <!-- SETTINGS -->
+	       <!--  <li class="dropdown close">
 	            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
 	            	<i style="font-size: 1.0em;" class="fa fa-cog"></i>
 	            	<span class="caret"></span>
@@ -30,10 +33,11 @@
 	            <ul class="dropdown-menu" role="menu">
 	              <li><a href="#">Settings</a></li>
 	            </ul>
-	         </li>
+	         </li> -->
 
+	         <!-- USER -->
 	         <li class="dropdown close">
-	            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+	            <a id="navbar-btn-accounts" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
 	            	<i style="font-size: 1.0em;" class="fa fa-user"></i>
 	            	<span class="caret"></span>
 	            </a>
@@ -41,10 +45,6 @@
 	              <li> {{> loginButtons}} </li>
 	            </ul>
 	         </li>
-	        <!--  <li>
-		 		{{> loginButtons }}
-	         </li> -->
-
 	    </ul>
 
 	  </div>

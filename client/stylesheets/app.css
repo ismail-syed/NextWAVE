@@ -21,3 +21,8 @@ body {
 .post-block{
 	padding: 10px 10px ;
 }
+
+/* OVERRIDE ACCOUNTS-UI */
+.login-close-text {
+	display: none;
+}
