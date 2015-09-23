@@ -11,5 +11,4 @@ Template.post.events({
       Posts.remove(this._id);
     }
   });
-
  

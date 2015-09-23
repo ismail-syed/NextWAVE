@@ -21,8 +21,15 @@ body {
 .post-block{
 	padding: 10px 10px ;
 }
+#btn-unsubscribe{
+	display:none;
+}
 
 /* OVERRIDE ACCOUNTS-UI */
 .login-close-text {
 	display: none;
+}
+
+#loginButtonLi{
+	padding: 10px;
 }

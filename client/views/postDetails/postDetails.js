@@ -13,5 +13,19 @@ Template.postDetails.events({
    	  });
      
       e.target.addComment.value = "";
+    },
+    "click #btn-subscribe": function (e) {
+    	var btnSubscribe = e.target;
+    	var btnUnsubscribe = $(btnSubscribe).next(); 
+    	
+    	$(btnUnsubscribe).css('display', 'block');
+    	$(btnSubscribe).css('display', 'none');
+    },
+    "click #btn-unsubscribe": function (e) {
+    	var btnUnsubscribe = e.target
+    	var btnSubscribe = $(btnUnsubscribe).prev();
+    	
+    	$(btnSubscribe).css('display', 'block');
+    	$(btnUnsubscribe).css('display', 'none');
     }
   });
