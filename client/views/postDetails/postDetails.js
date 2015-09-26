@@ -42,39 +42,3 @@ Template.postDetails.helpers({
 	   return false; 
 	}
 });
-
-// When rendered display subscribe or unsubscribed button based on the user's profile
-// Template.postDetails.onRendered(function () {
-//   this.autorun(function(c) {
-//     var user = Meteor.user()
-//     var name = user && user.profile && user.profile.name;
-//     // debugger;
-//     if (name) {
-//       c.stop();
-//     }
-//     if ( Meteor.user() )
-//     {
-//     	debugger;
-
-// 	   var isSubscribed; 
-// 	   var subscribedPosts = Meteor.user().profile.subscribedPosts;
-
-// 	   for(var i=0; i < subscribedPosts.length; i++){
-// 	   	if( this._id === subscribedPosts[i] ){
-// 	   		isSubscribed = true; 
-// 	   	}
-// 	   }
-// 	   isSubscribed = false; 
-
-// 	   if(subscribedPosts){
-// 	   	$("btn-unsubscribe").css('display', 'block');
-// 	   }
-// 	   else{
-// 	   	$("btn-subscribe").css('display', 'block');
-// 	   }  
-//     }
-
-//   }
-//   );
-// });
-
