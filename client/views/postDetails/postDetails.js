@@ -1,54 +1,13 @@
 // EVENTS
 Template.postDetails.events({
-   // "submit #addCommentForm": function(e) {
-   //   // alert("start submitee")
-   //    e.preventDefault();
-   //    var comment = e.target.addComment.value;
-   // 	  Comments.insert({
-   // 	  	text: comment, 
-   // 	  	commenterId: Meteor.userId(),
-	  // 	commenterName: Meteor.user().username, 
-	  // 	parentPost: this._id, 
-   // 	  	createdAt: new Date()
-   // 	  });
-     
-   //    e.target.addComment.value = "";
-   //  },
-   //  "click #btn-subscribe": function (e) {
-   //  	var btnSubscribe = e.target;
-   //  	var btnUnsubscribe = $(btnSubscribe).next(); 
-
-   //  	var subscribedPosts = Meteor.user().profile.subscribedPosts;
-   //  	if(!subscribedPosts){
-   //  		Meteor.user().profile.subscribedPosts = [];
-   //  	}
-   //  	else{
-   //  		subscribedPosts.push({
-   //  			"postId" : this._id, 
-   //  			"postName" : this.name
-   //  		});
-	  //   	Meteor.users.update({_id:Meteor.user()._id}, { $set: {"profile.subscribedPosts" : subscribedPosts} });
-   //  	}
-
-   //  	$(btnUnsubscribe).css('display', 'block');
-   //  	$(btnSubscribe).css('display', 'none');
-   //  },
-   //  "click #btn-unsubscribe": function (e) {
-   //  	var btnUnsubscribe = e.target
-   //  	var btnSubscribe = $(btnUnsubscribe).prev();
-    	
-   //  	$(btnSubscribe).css('display', 'block');
-   //  	$(btnUnsubscribe).css('display', 'none');
-   //  },
     "click #subscribedRadioButton": function(e) {
-    	debugger;
+      debugger; 
+      if(!Meteor.user().profile.subscribedPosts){
+          Meteor.users.update({_id:Meteor.user()._id}, { $set: {"profile.subscribedPosts" : []} });
+      }
     	var checkBox = e.target;
     	var subscribedPosts = Meteor.user().profile.subscribedPosts;
 
-    	if(!subscribedPosts){
-    		Meteor.user().profile.subscribedPosts = [];
-    	}
-    	else{
     		if(checkBox.checked) {
 	    		subscribedPosts.push({
 	    			"postId" : this._id, 
@@ -66,7 +25,7 @@ Template.postDetails.events({
 	    		subscribedPosts.splice(removeIndex, 1);
 		    	Meteor.users.update({_id:Meteor.user()._id}, { $set: {"profile.subscribedPosts" : subscribedPosts} });
 	    	}
-    	}
+
     }
   });
 
