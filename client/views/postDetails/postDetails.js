@@ -54,6 +54,32 @@ Template.postDetails.events({
             Posts.update({_id:this._id}, { $set: {"subscribers" : currSubscribers} });
     	}
 
+    },
+    "submit #addCommentForm": function(e) {
+     // alert("start submitee")
+      e.preventDefault();
+      var comment = e.target.addComment.value;
+         Comments.insert({
+           text: comment, 
+           commenterId: Meteor.userId(),
+       commenterName: Meteor.user().username, 
+       parentPost: this._id, 
+           createdAt: new Date()
+         });
+     
+      e.target.addComment.value = "";
+    },
+    "submit #createPostUpdateForm": function(e) {
+      e.preventDefault();
+      var update = e.target.updateText.value;
+         Notifications.insert({
+           text: update, 
+           postName: this.name,
+           postId: this._id,
+           createdAt: new Date()
+         });
+     
+      e.target.updateText.value = "";
     }
   });
 

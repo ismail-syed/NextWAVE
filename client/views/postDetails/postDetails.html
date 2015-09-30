@@ -1,6 +1,7 @@
 <template name="postDetails">
 	{{> navbar}}
 	<div class="container">		
+		
 		<!-- MAIN HEADER DETAILS BOX -->
 		<div class="col-sm-12 col-md-12 col-lg-12 secondary-box">  
 			<div class="row">
@@ -36,6 +37,36 @@
 			</div>
 		</div>
 
+		<!-- UPDATES FORM -->
+		<!-- {{#if Admin}} -->
+		<div class="col-sm-12 col-md-12 col-lg-12 secondary-box">
+			<form id="createPostUpdateForm" class="add-post">
+				<fieldset>
+					<legend>
+						<div class="">
+							<h4 style="display:inline" class=""> Send out an update </h4>  
+							<i class="fa fa-plus-square fa-lg pull-right" data-toggle="collapse" data-target="#update-post"></i> 
+						</div> 
+					</legend>
+
+					<div id="update-post" class="collapse">
+						<div class="col-xs-offset-2 col-xs-8 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8">
+						    <input id="updateText" class="form-control" type="text" placeholder="Send an update to all your subscribers"/>
+						</div>
+						 <div class="submit-btn form-
+						 group col-xs-2 col-sm-2 col-md-2 col-lg-2">
+		                      <input type="submit" class="submit btn btn-sm btn-primary" value="Send Update">
+		                 </div>
+					</div>
+
+				</fieldset>
+			</form>
+		</div>
+
+		<!-- {{/if}} -->
+
+
+		<!-- COMMENTS -->
 		<div class="col-sm-12 col-md-12 col-lg-12 secondary-box">  
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
