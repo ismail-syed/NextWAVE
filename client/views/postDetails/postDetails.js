@@ -1,6 +1,7 @@
 // EVENTS
 Template.postDetails.events({
     "click #subscribedRadioButton": function(e) {
+        // debugger; 
       if(!Meteor.user().profile || !Meteor.user().profile.subscribedPosts ){
           Meteor.users.update({_id:Meteor.user()._id}, { $set: {"profile.subscribedPosts" : []} });
       }
@@ -9,6 +10,7 @@ Template.postDetails.events({
       }
     	var checkBox = e.target;
     	var subscribedPosts = Meteor.user().profile.subscribedPosts;
+        var currSubscribers = this.subscribers; 
 
 
 		if(checkBox.checked) {
@@ -20,10 +22,13 @@ Template.postDetails.events({
 	    	Meteor.users.update({_id:Meteor.user()._id}, { $set: {"profile.subscribedPosts" : subscribedPosts} });
     		
     		// The post object should know about the user subscribing
-    		this.subscribers.push({
+    		currSubscribers.push({
     			"userId": Meteor.userId(),
     			"user": Meteor.user().username
     		});
+
+            Posts.update({_id:this._id}, { $set: {"subscribers" : currSubscribers} });
+            
     	}
     	else {
 
@@ -40,12 +45,13 @@ Template.postDetails.events({
 
 	    	// Remove this user from the subscribers of this post
 	    	var removeSubscriberIndex;
-	    	for(var i=0; i<this.subscribers.length; i++){
-    			if(this._id === this.subscribers[i]){
+	    	for(var i=0; i<currSubscribers.length; i++){
+    			if(this._id === currSubscribers[i]){
     				removeSubscriberIndex = i;
     			}
     		}
-			this.subscribers.splice(removeSubscriberIndex, 1);
+			currSubscribers.splice(removeSubscriberIndex, 1);
+            Posts.update({_id:this._id}, { $set: {"subscribers" : currSubscribers} });
     	}
 
     }
