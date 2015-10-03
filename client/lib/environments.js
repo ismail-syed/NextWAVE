@@ -12,6 +12,11 @@
 	Router.route('/subscribedPosts', function () {
 		this.render('subscribedPosts');
 	});
+
+	Router.route('/notifications', function () {
+		this.render('notifications');
+	});
+
 	// Router.route('/post');
 
 	// Router.route('/post', {

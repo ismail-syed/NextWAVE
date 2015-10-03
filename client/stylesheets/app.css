@@ -34,3 +34,7 @@ body {
 #loginButtonLi{
 	padding: 10px;
 }
+
+.notificationNavbarItem{
+	width: 250px;
+}

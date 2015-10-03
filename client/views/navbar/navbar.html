@@ -14,13 +14,19 @@
 		<ul class="nav navbar-nav navbar-right">
 	        
 	        <!-- NOTIFICATIONS -->
-	        <li class="dropdown close">
+	        <li id="" class="dropdown close">
 	            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
 	            	<i style="font-size: 1.0em;" class="fa fa-list-alt"></i> 
 	            	<span class="caret"></span>
 	            </a>
 	            <ul class="dropdown-menu" role="menu">
-	              <li><a href="#">Notifications</a></li>
+
+	              {{#each navbarNotifications}}
+		              <li class="notificationNavbarItem"> 
+		              	<a href="/post/{{_id}}">{{this.post}} - {{this.text}} </a>
+		              </li>
+	              {{/each}}
+	              <li><a href="{{pathFor route='notifications'}}">All Notifications</a></li>
 	            </ul>
 	         </li>
 	      
@@ -42,7 +48,7 @@
 	            	<span class="caret"></span>
 	            </a>
 	            <ul class="dropdown-menu" role="menu">
-	              <li id=""> <a href="{{pathFor route='subscribedPosts'}}"> Subscribed Posts </a> </li>
+	              <!-- <li id=""> <a href="{{pathFor route='subscribedPosts'}}"> Subscribed Posts </a> </li> -->
 	              <li id="loginButtonLi"> {{> loginButtons}} </li>
 	            </ul>
 	         </li>

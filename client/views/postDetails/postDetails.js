@@ -10,21 +10,21 @@ Template.postDetails.events({
       }
     	var checkBox = e.target;
     	var subscribedPosts = Meteor.user().profile.subscribedPosts;
-        var currSubscribers = this.subscribers; 
+      var currSubscribers = this.subscribers; 
 
 
 		if(checkBox.checked) {
     		// The Meteour user object should know about the subscribed post
     		subscribedPosts.push({
-    			"postId" : this._id, 
-    			"postName" : this.name
+    			postId : this._id, 
+    			postName : this.name
     		});
 	    	Meteor.users.update({_id:Meteor.user()._id}, { $set: {"profile.subscribedPosts" : subscribedPosts} });
     		
     		// The post object should know about the user subscribing
     		currSubscribers.push({
-    			"userId": Meteor.userId(),
-    			"user": Meteor.user().username
+    			userId: Meteor.userId(),
+    			user: Meteor.user().username
     		});
 
             Posts.update({_id:this._id}, { $set: {"subscribers" : currSubscribers} });
@@ -72,13 +72,13 @@ Template.postDetails.events({
     "submit #createPostUpdateForm": function(e) {
       e.preventDefault();
       var update = e.target.updateText.value;
-         Notifications.insert({
-           text: update, 
-           postName: this.name,
-           postId: this._id,
-           createdAt: new Date()
-         });
-     
+      var notifications = this.notifications;
+
+      notifications.push({
+        text : update, 
+        createdAt: new Date()
+      });
+      Posts.update({_id:this._id}, { $set: {"notifications" : notifications} });
       e.target.updateText.value = "";
     }
   });

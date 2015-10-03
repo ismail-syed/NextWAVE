@@ -1,0 +1,11 @@
+<template name="notifications">
+	<div class="container">
+		<h4 class="page-header">Notifications</h4>
+		
+		<ul>
+			{{#each allNotifications}}
+				<li> {{this.post}} - {{this.text}} - {{this.createdAt}} </li>	
+			{{/each}}
+		</ul>
+	</div>
+</template>

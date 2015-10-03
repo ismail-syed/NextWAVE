@@ -24,6 +24,7 @@ Template.adminUi.events({
         location: postLocation, 
         description: postDescrition,
         subscribers: [],
+        notifications: [],
         createdAt: new Date()
       });
 
