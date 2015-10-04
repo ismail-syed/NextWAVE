@@ -23,6 +23,7 @@ Template.adminUi.events({
         timeEnd: postTimeEnd, 
         location: postLocation, 
         description: postDescrition,
+        comments: [],
         subscribers: [],
         notifications: [],
         createdAt: new Date()

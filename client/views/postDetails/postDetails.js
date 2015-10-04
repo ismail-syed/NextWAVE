@@ -59,14 +59,15 @@ Template.postDetails.events({
      // alert("start submitee")
       e.preventDefault();
       var comment = e.target.addComment.value;
-         Comments.insert({
-           text: comment, 
-           commenterId: Meteor.userId(),
-       commenterName: Meteor.user().username, 
-       parentPost: this._id, 
-           createdAt: new Date()
-         });
-     
+      var storedComments = this.comments
+    
+      storedComments.push({
+        text: comment,
+        commenterId: Meteor.userId(),
+        commenterName: Meteor.user().username,
+        createdAt: new Date()
+      });
+      Posts.update({_id:this._id}, { $set: {"comments" : storedComments} });
       e.target.addComment.value = "";
     },
     "submit #createPostUpdateForm": function(e) {

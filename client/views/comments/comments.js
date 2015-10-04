@@ -1,7 +1,7 @@
 // HELPERS 
  Template.comments.helpers({
     comments: function () {
-      return Comments.find( {parentPost: this._id} );
+      return this.comments
     },
   });
 

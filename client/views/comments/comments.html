@@ -1,14 +1,10 @@
 <template name="comments">
 	<div class="">
 		{{#each comments}}
-			{{> comment }}
+			<div class="">  
+			 <strong> {{ this.commenterName }} </strong> says <strong> {{this.text}} </strong> @ <i>{{this.createdAt}} </i> 
+			</div>
 			<hr>
 		{{/each}}
 	</div>
 </template>
-
-<template name="comment">   
-	<div class="">  
-	 <strong> {{ commenterName }} </strong> says <strong> {{text}} </strong> @ <i>{{createdAt}} </i> 
-	</div>
- </template>
