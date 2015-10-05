@@ -1,5 +1,4 @@
 // Configuration of any client side packages
-
 	Accounts.ui.config({
     	passwordSignupFields: 'USERNAME_ONLY'
 	});
@@ -16,13 +15,6 @@
 	Router.route('/notifications', function () {
 		this.render('notifications');
 	});
-
-	// Router.route('/post');
-
-	// Router.route('/post', {
-	//     data: function(){
-	//     }
-	// });
 
 	Router.route('/post/:_id', {
 	    template: 'postDetails',

@@ -8,7 +8,7 @@
 // EVENTS
 Template.post.events({
     "click .delete": function () {
-      Posts.remove(this._id);
+      Meteor.call("deletePost", this._id);
     }
   });
  

@@ -42,7 +42,6 @@ Template.postDetails.events({
     		subscribedPosts.splice(removePostIndex, 1);
 	    	Meteor.users.update({_id:Meteor.user()._id}, { $set: {"profile.subscribedPosts" : subscribedPosts} });
     		
-
 	    	// Remove this user from the subscribers of this post
 	    	var removeSubscriberIndex;
 	    	for(var i=0; i<currSubscribers.length; i++){
@@ -56,30 +55,29 @@ Template.postDetails.events({
 
     },
     "submit #addCommentForm": function(e) {
-     // alert("start submitee")
       e.preventDefault();
       var comment = e.target.addComment.value;
-      var storedComments = this.comments
-    
-      storedComments.push({
+      var commentsArray = this.comments
+
+      commentsArray.push({
         text: comment,
         commenterId: Meteor.userId(),
         commenterName: Meteor.user().username,
         createdAt: new Date()
       });
-      Posts.update({_id:this._id}, { $set: {"comments" : storedComments} });
+
+      Meteor.call("addComment", this, commentsArray);;
       e.target.addComment.value = "";
     },
     "submit #createPostUpdateForm": function(e) {
       e.preventDefault();
       var update = e.target.updateText.value;
       var notifications = this.notifications;
-
       notifications.push({
         text : update, 
         createdAt: new Date()
       });
-      Posts.update({_id:this._id}, { $set: {"notifications" : notifications} });
+      Meteor.call("createNotification", this, notifications);
       e.target.updateText.value = "";
     }
   });

@@ -4,3 +4,9 @@
     }
     return false;
   });
+
+  Template.posts.helpers({
+    posts: function () {
+      return Coursepacks.find({}, {sort: {createdAt: -1}} );
+    }   
+  });
