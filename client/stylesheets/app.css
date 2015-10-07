@@ -38,3 +38,40 @@ body {
 .notificationNavbarItem{
 	width: 250px;
 }
+
+
+
+/* HOMEPAGE LOGIN CSS OVERRIDE */
+/*.login-username {
+
+}
+
+#login-buttons-password {
+	font-size: 16pt;
+	text-align: center;
+	color: #fff;
+	background-color: #4caf50;
+	border-color: #357ebd;
+}
+
+.login-form > .additional-link-container{
+	margin: 10px 0px;
+	font-size: 16pt;
+	text-align: center;
+	background-color: #428bca;
+	border-color: #357ebd;
+}
+
+.login-form > .additional-link-container > #signup-link,
+.login-form > .additional-link-container > #back-to-login-link {
+	color: #fff;
+}
+#login-username-label-and-input,
+#login-password-label-and-input {
+	text-align: center;
+}
+#login-password,
+#login-username {
+	width: 75%;
+	margin: 10px 0px;
+}*/
