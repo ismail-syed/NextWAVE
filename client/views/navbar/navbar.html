@@ -49,7 +49,11 @@
 	            </a>
 	            <ul class="dropdown-menu" role="menu">
 	              <!-- <li id=""> <a href="{{pathFor route='subscribedPosts'}}"> Subscribed Posts </a> </li> -->
-	              <li id="loginButtonLi"> {{> loginButtons}} </li>
+	              <li id="loginButtonLi"> 
+	              	{{#if currentUser}}
+		              	{{> loginButtons}} 
+	              	{{/if}}
+	              </li>
 	            </ul>
 	         </li>
 	    </ul>
