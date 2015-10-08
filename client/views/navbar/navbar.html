@@ -15,7 +15,7 @@
 	        
 	        <!-- NOTIFICATIONS -->
 	        <li id="" class="dropdown close">
-	            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+	            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
 	            	<i style="font-size: 1.0em;" class="fa fa-list-alt"></i> 
 	            	<span class="caret"></span>
 	            </a>
@@ -30,29 +30,19 @@
 	            </ul>
 	         </li>
 	      
-	      <!-- SETTINGS -->
-	       <!--  <li class="dropdown close">
-	            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-	            	<i style="font-size: 1.0em;" class="fa fa-cog"></i>
-	            	<span class="caret"></span>
-	            </a>
-	            <ul class="dropdown-menu" role="menu">
-	              <li><a href="#">Settings</a></li>
-	            </ul>
-	         </li> -->
-
 	         <!-- USER -->
 	         <li class="dropdown close">
-	            <a id="navbar-btn-accounts" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+	            <a id="navbar-btn-accounts" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
 	            	<i style="font-size: 1.0em;" class="fa fa-user"></i>
 	            	<span class="caret"></span>
 	            </a>
 	            <ul class="dropdown-menu" role="menu">
 	              <!-- <li id=""> <a href="{{pathFor route='subscribedPosts'}}"> Subscribed Posts </a> </li> -->
 	              <li id="loginButtonLi"> 
-	              	{{#if currentUser}}
+	              	<a >Login</a>
+	              	<!-- {{#if currentUser}}
 		              	{{> loginButtons}} 
-	              	{{/if}}
+	              	{{/if}} -->
 	              </li>
 	            </ul>
 	         </li>

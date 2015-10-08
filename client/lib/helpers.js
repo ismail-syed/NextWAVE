@@ -1,5 +1,7 @@
  Template.registerHelper("isAdmin", function(){
-    if(Meteor.user()._id === "swTFhj4KiGweGmeuL"){
+    // Production: kM38yPDw6EPgCCMto
+    // Dev: swTFhj4KiGweGmeuL
+    if(Meteor.user()._id === "kM38yPDw6EPgCCMto"){
       return true;
     }
     return false;

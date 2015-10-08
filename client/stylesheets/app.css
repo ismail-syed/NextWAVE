@@ -2,6 +2,11 @@
 body {
  padding-top: 70px; 
 }
+#login-nextwave-logo,
+#login-nextwave-logo-text{
+	display: block;
+	margin: 0 auto;
+}
 
 #navbar-nextwave-logo{
 	margin: -10px 0px 0px 0px;
@@ -39,10 +44,8 @@ body {
 	width: 250px;
 }
 
-
-
 /* HOMEPAGE LOGIN CSS OVERRIDE */
-/*.login-username {
+.login-username {
 
 }
 
@@ -74,4 +77,4 @@ body {
 #login-username {
 	width: 75%;
 	margin: 10px 0px;
-}*/
+}
