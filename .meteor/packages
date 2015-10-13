@@ -10,6 +10,6 @@ accounts-base
 accounts-password
 accounts-ui-unstyled
 fortawesome:fontawesome
-tsega:bootstrap3-datetimepicker
 iron:router
 twbs:bootstrap
+tsega:bootstrap3-datetimepicker
