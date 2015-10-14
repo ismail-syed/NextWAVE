@@ -44,12 +44,33 @@ body {
 	width: 250px;
 }
 
-/* HOMEPAGE LOGIN CSS OVERRIDE */
-.login-username {
-
+#login-buttons-logout {
+	background-color: #4caf50;
+	padding: 2px 10px; 
+	color: #fff;
+	margin: 10px 0px 0px 0px;
 }
 
-#login-buttons-password {
+#login-buttons-open-change-password {
+	background-color: #337ab7;
+	padding: 2px 10px; 
+	color: #fff;
+}
+
+#login-buttons-do-change-password{
+	background-color: #337ab7;
+	padding: 2px 10px; 
+	color: #fff;
+	margin: 10px 0px 0px 0px;
+}
+#navbar-btn-accounts {
+
+}
+/* HOMEPAGE LOGIN CSS OVERRIDE */
+/*#login-username, #login-password{
+	width: 100% !important;
+}*/
+#homepageLogin #login-buttons-password {
 	font-size: 16pt;
 	text-align: center;
 	color: #fff;
@@ -57,7 +78,7 @@ body {
 	border-color: #357ebd;
 }
 
-.login-form > .additional-link-container{
+#homepageLogin .login-form > .additional-link-container{
 	margin: 10px 0px;
 	font-size: 16pt;
 	text-align: center;
@@ -65,16 +86,16 @@ body {
 	border-color: #357ebd;
 }
 
-.login-form > .additional-link-container > #signup-link,
-.login-form > .additional-link-container > #back-to-login-link {
+#homepageLogin .login-form > .additional-link-container > #signup-link,
+#homepageLogin .login-form > .additional-link-container > #back-to-login-link {
 	color: #fff;
 }
-#login-username-label-and-input,
-#login-password-label-and-input {
+#homepageLogin #login-username-label-and-input,
+#homepageLogin #login-password-label-and-input {
 	text-align: center;
 }
-#login-password,
-#login-username {
+#homepageLogin #login-password,
+#homepageLogin #login-username {
 	width: 75%;
 	margin: 10px 0px;
 }
